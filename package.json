@@ -1,0 +1,26 @@
+{
+  "name": "cuellasng_swapi-app-optimizado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "prep:dist": "node -e \"require('fs').mkdirSync('dist',{recursive:true})\"",
+    "build:js": "esbuild src/app.js --bundle --minify --outfile=dist/app.min.js",
+    "build:css": "esbuild src/styles.css --minify --outfile=dist/styles.min.css",
+    "copy:html": "node -e \"require('fs').copyFileSync('src/index.html','dist/index.html')\"",
+    "build": "npm run prep:dist && npm run build:js && npm run build:css && npm run copy:html",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "esbuild": "^0.25.10"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^5.1.0"
+  }
+}

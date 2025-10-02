@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Star Wars + AJAX (SWAPI + httpbin)</title>
+  <link rel="preconnect" href="https://api.allorigins.win" crossorigin>
+  <link rel="preconnect" href="https://swapi.info" crossorigin>
+  <link rel="stylesheet" href="./styles.min.css">
+</head>
+<body>
+  <h1>Personajes de Star Wars (SWAPI)</h1>
+  <p class="note">Fuente: <code>https://swapi.info/</code></p>
+
+  <div class="actions">
+    <button id="btnLoad">Cargar personajes</button>
+    <button id="btnPost">Probar POST a httpbin</button>
+  </div>
+
+  <div id="status" class="status"></div>
+
+  <div id="grid" class="grid" aria-live="polite"></div>
+
+  <footer>
+    <strong>Hecho con 💚</strong> by Nati.
+  </footer>
+
+  <script src="./app.min.js" defer></script>
+</body>
+</html>
